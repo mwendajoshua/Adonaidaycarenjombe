@@ -1,0 +1,401 @@
+/*======================
+    ROOT VARIABLES
+=======================*/
+:root {
+  --primary: #2b6cb0;
+  --secondary: #38b2ac;
+  --dark: #1a202c;
+  --light: #ffffff;
+  --text: #333;
+  --bg: #f7fafc;
+}
+
+/* Dark mode */
+body.dark {
+  --bg: #1e1e1e;
+  --text: #e2e8f0;
+  --light: #1e293b;
+}
+
+body.dark {
+  transition: all 0.3s ease;
+}
+
+/*======================
+    GLOBAL STYLES
+=======================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  padding: 70px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: var(--primary);
+}
+
+/*======================
+    HEADER / NAVBAR
+=======================*/
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: var(--light);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  border-radius: 10px;
+}
+
+.logo-text h2 {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.logo-text span {
+  font-size: 12px;
+  color: gray;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.join-btn {
+  background: var(--primary);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+#darkMode {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/*======================
+        HERO
+=======================*/
+.hero {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 5% 20px;
+  background: linear-gradient(120deg, #2b6cb0, #38b2ac);
+  color: white;
+  position: relative;
+  overflow: visible;
+}
+
+.hero-content {
+  margin-top: 60px;
+  max-width: 100%;
+}
+
+.hero h1 {
+  font-size: 60px;
+}
+
+.hero h1 span {
+  color: yellow;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+h1, h4 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: yellow;
+  color: black;
+}
+
+.btn-secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+/* Hero cards */
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.hero-cards .card {
+  background: rgba(255,255,255,0.2);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/*======================
+    ABOUT / WHY / SERVICES
+=======================*/
+.about-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.box, .service-box, .testimonial {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/*======================
+    SCHEDULE
+=======================*/
+.timeline {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+}
+
+.timeline li {
+  padding: 10px;
+  border-left: 3px solid var(--primary);
+  margin-bottom: 10px;
+}
+
+.timeline span {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/*======================
+    GALLERY
+=======================*/
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*======================
+    FAQ
+=======================*/
+.faq-item {
+  background: var(--light);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/*======================
+    CONTACT
+=======================*/
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: var(--primary);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+/*======================
+    FOOTER
+=======================*/
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/*======================
+    FLOATING BUTTONS
+=======================*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  z-index: 1000;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: none;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*======================
+    RESPONSIVE
+=======================*/
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+/*======================
+   MOBILE MENU
+=======================*/
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    flex-direction: column;
+    background: var(--light);
+    padding: 20px;
+    gap: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+}
+
+/* sections zote ziwe grey laini */
+
+
