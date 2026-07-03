@@ -297,6 +297,37 @@ h1, h4 {
   border-radius: 5px;
 }
 
+/* SOCIALS */
+.socials{
+margin-top:15px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.socials a{
+display:flex;
+align-items:center;
+gap:8px;
+text-decoration:none;
+color:#fff;
+padding:10px 14px;
+background:linear-gradient(135deg,#1e3a8a,#0ea5e9);
+border-radius:8px;
+transition:.3s;
+}
+
+.socials a i{
+font-size:18px;
+}
+
+.socials a:hover{
+transform:translateY(-3px);
+box-shadow:0 0 15px rgba(14,165,233,0.6);
+}
+
+
 /*======================
     FOOTER
 =======================*/
@@ -396,6 +427,6 @@ footer {
   }
 }
 
-/* sections zote ziwe grey laini */
+
 
 
